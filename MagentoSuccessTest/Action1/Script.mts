@@ -1,15 +1,15 @@
 ﻿set oShell = CreateObject("WScript.Shell")
 
-TEST_URL = oShell.ExpandEnvironmentStrings("%TEST_URL%")
+APP_URL = oShell.ExpandEnvironmentStrings("%TEST_URL%")
 'Browser =  oShell.ExpandEnvironmentStrings("%Browser%")
-'TEST_URL = ("http://54.89.102.77")
-Call Magento_Search_Validation(TEST_URL)
+'APP_URL = ("http://54.89.102.77")
+Call Magento_Search_Validation(APP_URL)
 
  @@ hightlight id_;_Browser("Home page").Page("Checkout").WebButton("Place Order")_;_script infofile_;_ZIP::ssf50.xml_;_
-Function Magento_Search_Validation(TEST_URL)
+Function Magento_Search_Validation(APP_URL)
 Set oIE = CreateObject("InternetExplorer.Application")
 oIE.Visible = True
-oIE.Navigate(TEST_URL)
+oIE.Navigate(APP_URL)
 
 Browser("Home page").Page("Home page").WebEdit("q").Set "Samsung" @@ hightlight id_;_Browser("Home page").Page("Home page").WebEdit("q")_;_script infofile_;_ZIP::ssf88.xml_;_
 Browser("Home page").Page("Home page").WebButton("Search").Click @@ hightlight id_;_Browser("Home page").Page("Home page").WebButton("Search")_;_script infofile_;_ZIP::ssf89.xml_;_
