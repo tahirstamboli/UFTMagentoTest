@@ -1,4 +1,4 @@
-﻿﻿set oShell = CreateObject("WScript.Shell")
+set oShell = CreateObject("WScript.Shell")
 APP_URL = oShell.ExpandEnvironmentStrings("%TEST_URL%")
 Call Validate_home_page_magento(APP_URL)
 'Call Validate_Add_to_Cart
@@ -18,6 +18,8 @@ wait 40
 If Browser("Title:=Home page*").Page("title:=Home Page*").Exist(1) Then
 'Print a Pass message 
 Print "User is on Home Page"
+'Capture screenshot for Home Page 
+Call CaptureScreen_homepage
 Else
 Print "Error !!!"
 End If
@@ -33,17 +35,8 @@ Browser("Internet Explorer Enhanced").Dialog("Internet Explorer").WinButton("Yes
 
 wait 5
 
-End Function @@ hightlight id_;_Browser("Home page").Page("Home page").WebButton("Search")_;_script infofile_;_ZIP::ssf89.xml_;_
+End Function 
 
-Function Validate_Add_to_Cart
-Browser("Home page").Page("Search results for: 'samsung'").WebButton("Add to Cart").Click @@ hightlight id_;_Browser("Home page").Page("Search results for: 'samsung'").WebButton("Add to Cart")_;_script infofile_;_ZIP::ssf90.xml_;_
-wait 20
-Call CaptureScreenSnap_homepage()
-wait 10
-Browser("Home page").Quit
-End Function
-
-
-Function CaptureScreenSnap_homepage
-Browser("Home page").CaptureBitmap "C:\Report\Magento.png", True
+Function CaptureScreen_homepage
+Browser("Home page").CaptureBitmap "C:\Report\Magento_home_page.png", True
 End Function
