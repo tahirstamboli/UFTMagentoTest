@@ -12,7 +12,7 @@ oIE.Navigate(APP_URL)
 'Maximize the Browser Window
 Window("hwnd:=" & oIE.HWND).Maximize
 
-wait 20
+wait 40
 
 ' Test Case to check if home page is Displayed
 If Browser("Title:=Home page*").Page("title:=Home Page*").Exist(1) Then
