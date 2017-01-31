@@ -11,5 +11,5 @@ Browser("Home page").Quit
 End Function
 
 Function CaptureScreenSnap_homepage
-Browser("Home page").CaptureBitmap "C:\Report\Magento.png", True
+Browser("Home page").CaptureBitmap "C:\testnow\code\Report\Magento_add_to_cart.png", True
 End Function
