@@ -1,4 +1,4 @@
-testResourcePath = "Report"
+testResourcePath = "C:\testnow\code\"
 
 
 'Getting the test path
