@@ -1,5 +1,4 @@
-testResourcePath = "C:\"
-
+testResourcePath = OUTPUT_DIR
 
 
 'Getting the test path
