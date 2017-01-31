@@ -12,15 +12,12 @@ Print "User is on Home Page"
 Call CaptureScreen_homepage
 Else
 Print "Error !!!"
-Exit Function
 End If
 Call CaptureScreen_cart()
 wait 10
 Browser("Home page").Quit
-Exit Function
 End Function
 
 Function CaptureScreen_cart
 Browser("Home page").CaptureBitmap "C:\testnow\code\Report\Magento_Cart.png", True
-Exit Function
 End Function
