@@ -1,4 +1,4 @@
-testResourcePath = OUTPUT_DIR
+testResourcePath = "Report"
 
 
 'Getting the test path
