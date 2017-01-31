@@ -38,5 +38,5 @@ wait 5
 End Function 
 
 Function CaptureScreen_homepage
-Browser("Home page").CaptureBitmap "C:\Report\Magento_home_page.png", True
+Browser("Home page").CaptureBitmap "C:\testnow\code\Report\Magento_home_page.png", True
 End Function
