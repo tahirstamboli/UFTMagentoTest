@@ -18,6 +18,10 @@ If Search_engine="Chrome" Then
    ElseIF Search_engine="Firefox" Then
 		objShell.ShellExecute "firefox.exe", APP_URL, "", "", 1
 		Print "Firefox Browser Selected"
+		wait 40
+
+Browser("Home page").Quit
+ExitAction
    
    ElseIf Search_engine="IE" Then
 	    Set oIE = CreateObject("InternetExplorer.Application")
@@ -25,8 +29,9 @@ If Search_engine="Chrome" Then
 	    oIE.Navigate(APP_URL)
 	    Print "IE Browser Selected"
 	    Window("hwnd:=" & oIE.HWND).Maximize
+	    
+	   
 End If
 
-wait 40
   
 End Function 
